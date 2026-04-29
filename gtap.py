@@ -25,7 +25,7 @@ def calculate():
 
 buttons = []
 for i in range(9, -1, -1):
-    buttons.append(t.Button(root, text=i, width=5, height=2,command=lambda : add_num(i)))
+    buttons.append(t.Button(root, text=i, width=5, height=2,command=lambda i = i : add_num(i)))
 
 for i, btn in enumerate(buttons):
     btn.grid(row=1 + i // 3, column=i % 3)
